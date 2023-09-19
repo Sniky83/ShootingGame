@@ -17,6 +17,7 @@ namespace Core.Player
         public WeaponBase SecondaryWeapon { get; set; }
         public int Health { get; set; }
         public bool IsAlive { get; set; }
+        public bool IsFirstCall { get; set; }
         public double CalculateVelocity(int weaponWeight);
         public void ApplyCammo(CammoEnum cammo);
         public void CheckHealth(Player player);

@@ -17,6 +17,7 @@ namespace Core.Player
         public WeaponBase SecondaryWeapon { get; set; }
         public int Health { get; set; } = PlayerConst.BaseHealth;
         public bool IsAlive { get; set; } = true;
+        public bool IsFirstCall { get; set; } = true;
 
         public Player(string username, CammoEnum cammo, WeaponBase primaryWeapon, WeaponBase secondaryWeapon)
         {
@@ -84,8 +85,20 @@ namespace Core.Player
             Console.ForegroundColor = ConsoleColor.Yellow;
 
             Random random = new Random();
-            bool isShotMissed = random.Next(2) == 1;
+
             bool isPrimaryWeapon = random.Next(2) == 1;
+
+            bool isShotMissed = false;
+            bool isFirstShotMissed = false;
+
+            if (IsFirstCall)
+            {
+                isFirstShotMissed = random.NextDouble() >= 0.4;
+            }
+            else
+            {
+                isShotMissed = random.Next(2) == 1;
+            }
 
             if (isPrimaryWeapon)
             {
@@ -98,7 +111,7 @@ namespace Core.Player
 
             Console.ForegroundColor = ConsoleColor.Red;
 
-            if (!isShotMissed)
+            if (!isShotMissed && !isFirstShotMissed)
             {
                 if (isPrimaryWeapon)
                 {
@@ -117,6 +130,8 @@ namespace Core.Player
             {
                 Console.WriteLine("Shot missed :(");
             }
+
+            IsFirstCall = false;
         }
 
         public void Shoot(Player opponent)
