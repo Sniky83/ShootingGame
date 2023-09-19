@@ -53,7 +53,7 @@ namespace Core.Player
                     //Apply wood cammo to the player
                     break;
                 default:
-                    //Apply default cammo
+                    //Apply default cammo to the player
                     break;
             }
         }
