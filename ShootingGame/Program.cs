@@ -6,7 +6,7 @@ using Core.Weapon.Pistols;
 Player Sniky = new Player(username: "Sniky", cammo: CammoEnum.Arctic, primaryWeapon: new AK47(), new USP45());
 Player Corwin = new Player(username: "Corwin", cammo: CammoEnum.Desert, primaryWeapon: new M16(), new DesertEagle());
 
-//This generates Execption
+//This generates an Exception
 //Corwin.Shoot(Corwin);
 
 while (true)
