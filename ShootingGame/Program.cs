@@ -15,18 +15,19 @@ while (true)
 
     Sniky.Shoot(Corwin);
 
+    if(!Corwin.IsAlive)
+        break;
+
     Thread.Sleep(2000);
 
     Corwin.Shoot(Sniky);
 
-    if (!Sniky.IsAlive || !Corwin.IsAlive)
-    {
-        Console.ResetColor();
-
-        Console.WriteLine("Press any key to close the game.");
-
+    if (!Sniky.IsAlive)
         break;
-    }
 }
+
+Console.ResetColor();
+
+Console.WriteLine("Press any key to close the game.");
 
 Console.ReadKey();

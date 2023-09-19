@@ -29,7 +29,7 @@ namespace Core.Player
 
             Console.ForegroundColor = ConsoleColor.White;
 
-            Console.WriteLine($"Player : {username}\nCammo Chosen : {Enum.GetName(typeof(CammoEnum), cammo)}\nPrimary Weapon : {primaryWeapon.Name}\nSecondary Weapon : {secondaryWeapon.Name}\nRunning at : {VelocityPrimaryWeapon} km with {primaryWeapon.Name}\nRunning at : {VelocitySecondaryWeapon} km with {secondaryWeapon.Name}\nAmmo of Primary Weapon : {primaryWeapon.Ammo}\nAmmo of Secondary Weapon : {secondaryWeapon.Ammo}\nDamage of Primary Weapon : {primaryWeapon.Damage}\nDamage of Secondary Weapon : {secondaryWeapon.Damage}\n");
+            Console.WriteLine($"Player : {username}\nCammo chosen : {Enum.GetName(typeof(CammoEnum), cammo)}\nPrimary Weapon : {primaryWeapon.Name}\nSecondary Weapon : {secondaryWeapon.Name}\nRunning at : {VelocityPrimaryWeapon} km with {primaryWeapon.Name}\nRunning at : {VelocitySecondaryWeapon} km with {secondaryWeapon.Name}\nAmmo of Primary Weapon : {primaryWeapon.Ammo}\nAmmo of Secondary Weapon : {secondaryWeapon.Ammo}\nDamage of Primary Weapon : {primaryWeapon.Damage}\nDamage of Secondary Weapon : {secondaryWeapon.Damage}\n");
         }
 
         public double CalculateVelocity(int weaponWeight)
