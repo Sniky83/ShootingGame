@@ -52,6 +52,9 @@ namespace Core.Player
                 case CammoEnum.Wood:
                     //Apply wood cammo to the player
                     break;
+                default:
+                    //Apply default cammo
+                    break;
             }
         }
 
